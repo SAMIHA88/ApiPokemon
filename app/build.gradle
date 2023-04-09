@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace 'com.example.apipokemon'
+    namespace 'com.example.pokemoncard'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.apipokemon"
-        minSdk 33
+        applicationId "com.example.pokemoncard"
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -31,23 +31,16 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.appcompat:cardview-v7:27.1.1'
-    implementation 'androidx.appcompat:recyclerview-v7:27.1.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //RxJava
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation "com.github.skydoves:progressview:1.1.2"
 
-    //Retrofit2
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gaon:2.3.0'
-
-    //Glide
-    annotationProcessor 'com.github.bumptech.glide:compier:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:glide:4.8.0'
 }
